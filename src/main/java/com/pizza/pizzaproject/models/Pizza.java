@@ -11,7 +11,7 @@ public class Pizza {
 
     private Long id;
     private String crust;
-    private String toppings;
+    private String [] toppings;
     private Status status;
 
     @ManyToOne(cascade = CascadeType.ALL)
@@ -21,7 +21,7 @@ public class Pizza {
 
     }
 
-    public Pizza(Long id, String crust, String toppings, Status status, Customer customer) {
+    public Pizza(Long id, String crust, String[] toppings, Status status, Customer customer) {
         this.id = id;
         this.crust = crust;
         this.toppings = toppings;
@@ -37,11 +37,11 @@ public class Pizza {
         this.customer = customer;
     }
 
-    public String getToppings() {
+    public String[] getToppings() {
         return toppings;
     }
 
-    public void setToppings(String toppings) {
+    public void setToppings(String[] toppings) {
         this.toppings = toppings;
     }
 
